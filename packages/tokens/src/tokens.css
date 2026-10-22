@@ -1,0 +1,82 @@
+:root,
+[data-xw-theme='light'] {
+  color-scheme: light;
+  --xw-font-sans: "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", system-ui, sans-serif;
+  --xw-brand-primary: #6663ff;
+  --xw-brand-hover: #7166e5;
+  --xw-brand-pressed: #3f34c7;
+  --xw-brand-gradient: linear-gradient(90deg, #4642f0 0%, #a38cff 100%);
+  --xw-text-primary: #16152a;
+  --xw-text-secondary: #66707e;
+  --xw-text-tertiary: #8f95a0;
+  --xw-text-disabled: #b7bdc6;
+  --xw-text-on-brand: #ffffff;
+  --xw-surface-page: rgba(248, 249, 255, 0.88);
+  --xw-surface-card: #fcfcfe;
+  --xw-surface-brand-subtle: #f6f5ff;
+  --xw-border-default: #e5e7eb;
+  --xw-border-strong: #d1d5db;
+  --xw-border-brand: #cac6f5;
+  --xw-interaction-hover: rgba(3, 75, 216, 0.05);
+  --xw-interaction-pressed: rgba(3, 75, 216, 0.10);
+  --xw-status-success: #22c55e;
+  --xw-status-success-subtle: #e3ffed;
+  --xw-status-warning: #f59e0b;
+  --xw-status-warning-subtle: #fff6d1;
+  --xw-status-error: #f26063;
+  --xw-status-error-subtle: #ffebeb;
+  --xw-status-info: #3b82f6;
+  --xw-status-info-subtle: #eef5ff;
+  --xw-button-disabled: #e6e6e6;
+  --xw-overlay: rgba(22, 21, 42, 0.34);
+  --xw-shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --xw-shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+[data-xw-theme='dark'] {
+  color-scheme: dark;
+  --xw-brand-primary: #7465f5;
+  --xw-brand-hover: #8477f7;
+  --xw-brand-pressed: #6553f0;
+  --xw-brand-gradient: linear-gradient(90deg, #7465f5 0%, #a596fc 100%);
+  --xw-text-primary: #f5f6fa;
+  --xw-text-secondary: #c9cdd7;
+  --xw-text-tertiary: #9da4b3;
+  --xw-text-disabled: #666c79;
+  --xw-text-on-brand: #ffffff;
+  --xw-surface-page: rgba(13, 13, 13, 0.88);
+  --xw-surface-card: #1b1d24;
+  --xw-surface-brand-subtle: #110f25;
+  --xw-border-default: #2a2d36;
+  --xw-border-strong: #383b46;
+  --xw-border-brand: #7465f5;
+  --xw-interaction-hover: rgba(255, 255, 255, 0.06);
+  --xw-interaction-pressed: rgba(255, 255, 255, 0.10);
+  --xw-status-success: #37d67a;
+  --xw-status-success-subtle: #163725;
+  --xw-status-warning: #ffb020;
+  --xw-status-warning-subtle: #3a2b0a;
+  --xw-status-error: #ff6b73;
+  --xw-status-error-subtle: #3e1c20;
+  --xw-status-info: #72a7ff;
+  --xw-status-info-subtle: #172641;
+  --xw-button-disabled: #44444a;
+  --xw-overlay: rgba(0, 0, 0, 0.62);
+  --xw-shadow-card: 0 2px 8px rgba(116, 101, 245, 0.25);
+  --xw-shadow-card-hover: 0 8px 24px rgba(116, 101, 245, 0.36);
+}
+
+:root {
+  --xw-space-1: 4px;
+  --xw-space-2: 8px;
+  --xw-space-3: 12px;
+  --xw-space-4: 16px;
+  --xw-space-5: 20px;
+  --xw-space-6: 24px;
+  --xw-radius-small: 4px;
+  --xw-radius-medium: 12px;
+  --xw-radius-card: 16px;
+  --xw-radius-pill: 999px;
+  --xw-control-height: 36px;
+  --xw-focus-ring: 0 0 0 3px rgba(102, 99, 255, 0.28);
+}

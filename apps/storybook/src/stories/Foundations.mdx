@@ -1,0 +1,29 @@
+import { Meta, ColorPalette, ColorItem, Typeset } from '@storybook/blocks';
+
+<Meta title="基础/设计变量" />
+
+# 小微设计变量
+
+本页以 Figma 节点 `4358:5074` 为视觉基线。工具栏可切换浅色与深色主题。
+
+## 品牌色与语义色
+
+<ColorPalette>
+  <ColorItem title="Brand / Primary" subtitle="主操作、选中态、品牌锚点" colors={{ Primary: 'var(--xw-brand-primary)', Hover: 'var(--xw-brand-hover)', Pressed: 'var(--xw-brand-pressed)' }} />
+  <ColorItem title="Text" subtitle="内容层级" colors={{ Primary: 'var(--xw-text-primary)', Secondary: 'var(--xw-text-secondary)', Tertiary: 'var(--xw-text-tertiary)', Disabled: 'var(--xw-text-disabled)' }} />
+  <ColorItem title="Surfaces" subtitle="页面、卡片与品牌浅底" colors={{ Page: 'var(--xw-surface-page)', Card: 'var(--xw-surface-card)', BrandSubtle: 'var(--xw-surface-brand-subtle)' }} />
+  <ColorItem title="Status" subtitle="不可只依赖颜色表达状态" colors={{ Success: 'var(--xw-status-success)', Warning: 'var(--xw-status-warning)', Error: 'var(--xw-status-error)' }} />
+</ColorPalette>
+
+## 字体
+
+参考字体为 Microsoft YaHei UI / Microsoft YaHei。非 Windows 环境使用苹方或系统中文字体回退。
+
+<Typeset fontSizes={[36, 24, 20, 16, 14, 13, 12, 11]} fontWeight={400} sampleText="惠小微让电脑任务更简单" fontFamily="var(--xw-font-sans)" />
+
+## 使用原则
+
+- 4px 基础间距；常用 8 / 12 / 16 / 20 / 24px。
+- 卡片默认 16px 圆角；紧凑控件遵循自身规格。
+- 所有可交互组件都覆盖 hover、pressed、focus-visible、disabled；耗时操作增加 loading。
+- 深色主题使用独立语义 token，不对浅色值做简单反相。

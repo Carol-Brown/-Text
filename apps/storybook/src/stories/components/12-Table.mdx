@@ -1,0 +1,19 @@
+import { Meta } from '@storybook/blocks';
+import { DataTable, StatusBadge } from '@xiaowei/react';
+
+<Meta title="规范详解/数据展示/表格" />
+
+# 表格
+
+用于文件、设备、扫描项等需要跨列比较的数据；简单对象列表不要强行使用表格。
+
+<div className="xw-doc-demo">
+  <DataTable rows={[
+    { name: '产品手册.pdf', type: 'PDF', status: <StatusBadge tone="success">已完成</StatusBadge> },
+    { name: '售后政策.docx', type: 'Word', status: <StatusBadge tone="warning">解析中</StatusBadge> },
+    { name: '价格表.xlsx', type: 'Excel', status: <StatusBadge tone="error">需要重试</StatusBadge> },
+  ]} />
+</div>
+
+表头写明单位；文本左对齐、数值右对齐、操作列固定。必须设计排序、筛选、选择、批量操作、加载、空、错误和权限受限状态。窄窗口隐藏低优先级列并通过抽屉查看详情，不把全部列压窄。
+

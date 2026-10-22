@@ -1,0 +1,14 @@
+import type { Meta } from '@storybook/react'; import { story } from './factory';
+export default { title:'组件/7 业务组合', parameters:{layout:'fullscreen'} } satisfies Meta;
+export const 小微大面板=story({name:'AppShell 小微大面板',summary:'窗口栏、主导航、内容区、详情区和反馈层的组合。',maturity:'现有',demo:'layout',usage:['复杂任务、历史、编辑和结果查看。'],states:['标准','窄窗口','详情展开','全屏'],source:'首页与对话 4574:57048'});
+export const 桌面小球=story({name:'FloatingBall 桌面小球',summary:'轻量唤起、语音状态和任务返回入口。',maturity:'现有',demo:'float-button',usage:['保持独立窗口身份，不复制大面板。'],states:['收起','悬停','展开','聆听','执行','失败'],source:'桌面小球 9034:74648'});
+export const 语音唤醒=story({name:'VoiceWake 语音唤醒',summary:'在桌面边缘呈现唤醒、转写、发送和取消。',maturity:'现有',demo:'recording',usage:['不抢夺正在输入应用的焦点；低置信度允许编辑。'],states:['唤醒','聆听','转写','确认','发送','失败'],source:'语音唤醒 8973:74330'});
+export const 对话输入器=story({name:'Composer 对话输入器',summary:'整合文本、附件、语音、技能上下文与发送。',maturity:'修正',demo:'composer',usage:['生成中发送变为停止；附件显示上传与解析两阶段。'],states:['空','输入中','有附件','上传中','生成中','错误']});
+export const 智能任务卡=story({name:'TaskCard AI 任务卡',summary:'承载可持续、可暂停、可恢复的长任务。',maturity:'新增',demo:'task',usage:['面板、小球、通知和历史共享同一任务身份。'],states:['排队','执行','等待用户','暂停','完成','部分完成','失败']});
+export const 权限确认=story({name:'Permission 权限确认',summary:'说明访问对象、用途、处理位置和有效期。',maturity:'新增',demo:'permission',usage:['在能力即将使用时请求，默认任务级授权。'],states:['请求','允许','拒绝','过期','撤销']});
+export const 设备连接=story({name:'DeviceConnection 设备连接',summary:'发现、配对、授权、连接与恢复的完整状态。',maturity:'现有',demo:'device',usage:['设备身份和当前连接状态持续可见。'],states:['搜索','发现','配对','授权','已连接','降级','断开'],source:'设备连接 4586:4024'});
+export const 在线工程师=story({name:'ExpertService 在线工程师',summary:'工程师选择、排队、会话、文件与服务结束。',maturity:'现有',demo:'avatar',usage:['明确服务方、等待时间、费用和隐私边界。'],states:['可用','忙碌','排队','会话中','结束','转接'],source:'在线工程师 6793:67024'});
+export const 录屏工具条=story({name:'ScreenRecording 录屏工具条',summary:'录制范围、音频来源、录制状态和结束控制。',maturity:'现有',demo:'recording',usage:['停止录制始终在一键可达位置。'],states:['选择范围','倒计时','录制','暂停','保存','失败'],source:'录屏 4821:53365'});
+export const 登录注册=story({name:'SignIn 登录注册',summary:'扫码、账号登录、绑定与异常恢复。',maturity:'现有',demo:'login',usage:['解释登录收益；允许不登录继续使用本地能力。'],states:['未登录','扫码','已扫描','过期','绑定','失败'],source:'登录注册 5718:53928'});
+export const 额度购买=story({name:'TokenPurchase 额度购买',summary:'展示免费额度、套餐比较、支付与到账结果。',maturity:'现有',demo:'pricing',usage:['价格、周期、额度与自动续费清晰可见。'],states:['当前套餐','可购买','支付中','成功','失败','额度不足'],source:'Token 购买 7670:89398'});
+export const 设置与更新=story({name:'Settings 设置与更新',summary:'纵向导航组织账号、通用、模型、更新和关于。',maturity:'现有',demo:'tabs-v',usage:['即时生效设置使用 Switch；高风险设置说明影响。'],states:['默认','修改','未保存','更新可用','更新中','失败'],source:'设置与更新弹窗 5753:60863'});

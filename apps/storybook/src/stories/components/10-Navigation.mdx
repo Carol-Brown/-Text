@@ -1,0 +1,16 @@
+import { Meta } from '@storybook/blocks';
+import { Tabs, Steps } from '@xiaowei/react';
+
+<Meta title="规范详解/导航/标签页与步骤" />
+
+# 标签页与步骤
+
+<div className="xw-doc-demo xw-doc-demo--stack">
+  <Tabs items={['概览', '扫描结果', '历史记录']} active={1} />
+  <Steps items={['添加资料', '解析内容', '完成']} current={1} />
+</div>
+
+Tabs 用于同一对象的平级视图，默认不超过 6 项；Steps 用于 3–5 个有明确顺序且用户可理解的阶段。不要用 Tabs 表示流程，也不要把内部技术步骤暴露给用户。
+
+键盘使用方向键切换标签；当前标签具有 `aria-selected`。步骤状态必须包含等待、当前、完成和失败，并在文字中表达。
+

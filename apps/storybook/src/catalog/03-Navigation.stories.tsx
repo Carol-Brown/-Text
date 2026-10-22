@@ -1,0 +1,11 @@
+import type { Meta } from '@storybook/react'; import { story, baseStates } from './factory';
+export default { title:'组件/3 导航', parameters:{layout:'fullscreen'} } satisfies Meta;
+export const 锚点=story({name:'Anchor 锚点',summary:'定位长文档或设置页中的章节。',maturity:'新增',demo:'anchor',usage:['仅用于内容超过一屏且章节稳定的页面。'],states:['默认','当前章节','悬停']});
+export const 面包屑=story({name:'Breadcrumb 面包屑',summary:'显示知识库、设备等对象的层级位置。',maturity:'新增',demo:'breadcrumb',usage:['三层及以上层级使用。'],avoid:['一级模块和普通返回不使用。'],states:baseStates});
+export const 多级下拉=story({name:'Dropdown 多级下拉',summary:'承载紧凑操作菜单及子级选项。',maturity:'新增',demo:'dropdown',usage:['操作按频率排序，危险项单独分组。','子菜单向可用空间展开。'],states:['关闭','悬停','展开','子级展开','选中','禁用']});
+export const 导航菜单=story({name:'Menu 导航菜单',summary:'承载模块级导航或上下文操作。',maturity:'现有',demo:'menu',usage:['主菜单保持位置稳定并保留当前选择。'],states:['默认','悬停','当前','折叠','带徽标']});
+export const 分页=story({name:'Pagination 分页',summary:'定位不可连续加载的长数据集合。',maturity:'新增',demo:'pagination',usage:['需要页码定位或服务端分页时使用。'],avoid:['普通内容流优先加载更多或虚拟滚动。'],states:baseStates});
+export const 步骤条=story({name:'Steps 步骤条',summary:'表达 3–5 个可理解的顺序阶段。',maturity:'新增',demo:'steps',usage:['导入、配对、修复与工作流创建。'],states:['等待','当前','完成','失败','禁用']});
+export const 横向标签页=story({name:'Tabs 横向标签页',summary:'切换同一对象的平级内容。',maturity:'现有',demo:'tabs-h',usage:['默认不超过 6 项，名称短且互斥。'],states:baseStates});
+export const 纵向主标签=story({name:'Tabs 纵向主标签',summary:'用于设置、账户等稳定的二级模块。',maturity:'现有',demo:'tabs-v',usage:['左侧固定，右侧内容独立滚动。'],states:['默认','悬停','当前','禁用'],source:'设置与更新弹窗 5753:60863'});
+export const 主导航栏=story({name:'NavigationRail 主导航栏',summary:'小微大面板的固定一级导航。',maturity:'现有',demo:'menu',usage:['图标与文本配对；折叠后显示 Tooltip。'],states:['展开','折叠','悬停','当前','徽标'],source:'全部 6.0 大面板'});

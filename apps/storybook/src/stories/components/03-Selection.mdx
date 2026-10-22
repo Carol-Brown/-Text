@@ -1,0 +1,22 @@
+import { Meta } from '@storybook/blocks';
+import { Checkbox, Radio } from '@xiaowei/react';
+
+<Meta title="规范详解/数据录入/单选框与复选框" />
+
+# 单选框与复选框
+
+<div className="xw-doc-demo xw-doc-demo--stack">
+  <strong>清理范围</strong>
+  <Checkbox label="系统临时文件" defaultChecked />
+  <Checkbox label="浏览器缓存" />
+  <Checkbox label="下载目录中的文件" disabled />
+</div>
+
+<div className="xw-doc-demo xw-doc-demo--stack">
+  <strong>处理方式</strong>
+  <Radio name="process-mode" label="仅在本地处理" defaultChecked />
+  <Radio name="process-mode" label="使用云端增强识别" />
+</div>
+
+单选框表达一组互斥选择；复选框表达彼此独立的多项选择。标签区域整体可点击，并覆盖默认、悬停、选中、键盘聚焦和禁用状态。高风险选项旁必须解释影响。
+

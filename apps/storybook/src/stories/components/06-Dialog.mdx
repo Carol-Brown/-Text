@@ -1,0 +1,27 @@
+import { Meta } from '@storybook/blocks';
+import { Dialog, Field, Input } from '@xiaowei/react';
+
+<Meta title="规范详解/反馈/对话框" />
+
+# 对话框
+
+仅用于必须立即完成的决策、权限确认或高风险操作。普通信息优先使用页面提示或抽屉。
+
+<div className="xw-doc-demo xw-doc-demo--center">
+  <Dialog title="创建知识库" description="输入名称后即可继续添加资料。"><Field label="名称"><Input placeholder="知识库名称" /></Field></Dialog>
+</div>
+
+<div className="xw-doc-demo xw-doc-demo--center">
+  <Dialog danger title="删除“售后服务资料库”？" description="其中的 24 个来源和索引记录将被删除，此操作无法撤销。" />
+</div>
+
+## 尺寸与行为
+
+| 尺寸 | 宽度 | 场景 |
+|---|---:|---|
+| 小 | 400px | 简单确认、单字段输入 |
+| 中 | 520px | 权限、设置、上传确认 |
+| 大 | 720px | 多段说明或复杂预览 |
+
+弹窗打开后锁定焦点，关闭后返回触发控件。禁止嵌套弹窗；不可逆操作时不允许点击遮罩意外关闭。危险按钮写清动作对象，不使用模糊的“确定”。
+

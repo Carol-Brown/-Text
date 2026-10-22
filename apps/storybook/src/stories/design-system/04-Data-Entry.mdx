@@ -1,0 +1,46 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="维护/系统规范/04 数据录入" />
+
+# 数据录入
+
+## Field 统一结构（补充，P0）
+
+所有输入共享 `label / required / control / helper / error / counter`。标签放在控件上方；占位符只给示例，不替代标签；校验尽量在失焦或提交后出现，不在用户每输入一个字符时闪烁。
+
+状态：default、hover、focus、filled、disabled、read-only、loading、warning、error、success。错误文案同时说明问题和修复方式，例如“文件超过 20 MB，请压缩后重试”。
+
+## Input / Textarea / Search（现有，修正）
+
+- Input：名称、路径、短文本；支持前后缀和清除。
+- Textarea：长提示词、笔记和描述；默认 3–6 行，可增长但设置最大高度。
+- Search：输入即筛选；有清除；远程搜索显示加载与空结果；Enter 不触发无关主操作。
+- 会话 Composer 属于专用组合模式，见 AI Patterns，不用普通 Textarea 替代。
+
+## Select / Radio / Checkbox / Switch（部分现有，补充）
+
+| 控件 | 何时使用 | 避免 |
+|---|---|---|
+| Radio | 2–5 个互斥且需同时可见的选项 | 大量或动态选项 |
+| Select | 选项较多、空间有限 | 只有两个相反选项 |
+| Checkbox | 独立多选或“我已阅读” | 即时启停设置 |
+| Switch | 立即生效的开/关 | 需要提交或有复杂后果的选择 |
+
+勾选框和单选框的标签区域整体可点击；Switch 标签描述“开启后的能力”，并在高风险设置旁给出影响说明。
+
+## Number / Slider / Date & Time（补充，按需）
+
+数字输入必须显示单位、范围和步长；Slider 只用于近似调节并显示当前值。日期时间优先使用本地格式，同时在跨时区会议中明确时区。
+
+## Upload / Dropzone（现有，修正）
+
+上传前显示支持格式、数量、单文件大小与隐私说明。状态：idle、drag-over、validating、uploading、processing、success、failed、paused。文件列表展示名称、类型、大小、进度和移除/重试操作。上传成功不等于 AI 解析成功，两阶段必须分开。
+
+## Form actions
+
+长表单的主操作在末尾；关闭有未保存内容的表单需二次提醒。提交中锁定重复提交但保留取消路径。服务端错误在表单顶部汇总，并在对应字段就地标记。
+
+## Permission Request（补充，P0）
+
+权限请求要说明：需要什么权限、为了完成哪个任务、数据将发往哪里、是否可稍后开启。请求应发生在能力即将使用时，不在首次启动时批量索取。拒绝后提供不授权的替代路径。
+

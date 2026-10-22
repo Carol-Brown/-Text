@@ -1,0 +1,74 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="维护/系统规范/10 组件文档模板" />
+
+# 组件文档模板
+
+复制本页创建任何新组件文档；删除不适用的小节，但不要省略状态、行为和无障碍。
+
+## Component name `成熟度：现有 / 修正 / 补充`
+
+一句话说明它帮助用户完成什么。
+
+### When to use
+
+- 场景 A。
+- 场景 B。
+
+### When not to use
+
+- 不适用场景；改用哪个组件及原因。
+
+### Anatomy
+
+1. 必需区域。
+2. 可选区域。
+3. 操作区域。
+
+### Variants and sizes
+
+| Variant | Purpose | Notes |
+|---|---|---|
+| Default | 默认用途 | 限制 |
+
+### State matrix
+
+| State | Visual | Behavior | Copy / announcement |
+|---|---|---|---|
+| Default |  |  |  |
+| Hover |  |  |  |
+| Focus-visible |  |  |  |
+| Pressed |  |  |  |
+| Disabled |  |  |  |
+| Loading |  |  |  |
+| Error |  |  |  |
+| Empty |  |  |  |
+
+### Behavior
+
+说明打开、关闭、提交、取消、溢出、异步、失败、恢复和窗口缩放。
+
+### Content
+
+给出推荐和不推荐的中文实例；规定标题、说明和按钮的长度或句式。
+
+### Accessibility
+
+键盘操作、焦点、角色/名称/状态、动态播报、对比度、缩放和减少动画。
+
+### Tokens
+
+只列语义 token；如必须新增 token，说明它无法复用现有角色的原因。
+
+### QA scenarios
+
+- [ ] 浅色 / 深色 / 高对比度。
+- [ ] 键盘 / 屏幕阅读器。
+- [ ] 长中文 / 英文 / 数字 / 空值。
+- [ ] Loading / Error / Offline / Permission denied。
+- [ ] 窄窗口和 200% 缩放。
+
+### Change log
+
+记录日期、版本、设计负责人、变更和迁移影响。
+

@@ -1,0 +1,12 @@
+{
+  "name": "xiaowei-design-lab",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "storybook": "pnpm --filter @xiaowei/storybook storybook",
+    "build": "pnpm -r --if-present build",
+    "build:storybook": "pnpm --filter @xiaowei/storybook build-storybook",
+    "typecheck": "pnpm -r --if-present typecheck"
+  },
+  "engines": { "node": ">=20" }
+}

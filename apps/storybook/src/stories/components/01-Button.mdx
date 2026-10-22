@@ -1,0 +1,50 @@
+import { Meta } from '@storybook/blocks';
+import { Button } from '@xiaowei/react';
+
+<Meta title="规范详解/通用/按钮" />
+
+# 按钮
+
+用于触发一个明确动作，例如开始扫描、保存设置或确认删除。同一决策区域只保留一个主要按钮。
+
+<div className="xw-doc-demo">
+  <Button>开始扫描</Button>
+  <Button variant="secondary">查看详情</Button>
+  <Button variant="ghost">稍后处理</Button>
+  <Button variant="danger">删除记录</Button>
+</div>
+
+## 何时使用
+
+- 主要按钮：当前区域最推荐的下一步。
+- 次要按钮：与主要行动并列但优先级更低。
+- 幽灵按钮：工具栏或低强调操作。
+- 危险按钮：不可逆或高影响操作，只在明确确认后出现。
+
+## 尺寸
+
+<div className="xw-doc-demo">
+  <Button size="small">小按钮</Button>
+  <Button size="medium">中按钮</Button>
+  <Button size="large">大按钮</Button>
+</div>
+
+| 尺寸 | 高度 | 推荐场景 |
+|---|---:|---|
+| 小 | 32px | 表格行、输入区局部操作 |
+| 中 | 32px | 弹窗、卡片和标准工具区 |
+| 大 | 36px | 页面主要任务 |
+
+## 状态
+
+<div className="xw-doc-demo">
+  <Button loading>正在处理</Button>
+  <Button disabled>不可用</Button>
+</div>
+
+必须覆盖默认、悬停、按下、键盘聚焦、禁用和加载。加载时保持原宽度并阻止重复提交；失败后恢复按钮并在问题附近解释原因。
+
+## 文案与无障碍
+
+使用“动词 + 对象”，例如“上传文件”“停止扫描”。避免只有“确定”。纯图标按钮必须提供可访问名称和 Tooltip。
+

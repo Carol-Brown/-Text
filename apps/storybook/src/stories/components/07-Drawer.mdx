@@ -1,0 +1,15 @@
+import { Meta } from '@storybook/blocks';
+import { Drawer, StatusBadge } from '@xiaowei/react';
+
+<Meta title="规范详解/反馈/抽屉" />
+
+# 抽屉
+
+用于在保留原页面上下文时查看详情、筛选或进行非阻断编辑。
+
+<div className="xw-doc-demo" style={{justifyContent: 'flex-end'}}>
+  <Drawer title="扫描详情"><StatusBadge tone="warning">发现 3 项建议</StatusBadge><p>启动项 2 项，磁盘空间 1 项。所有建议均需确认后执行。</p></Drawer>
+</div>
+
+推荐宽度 360 / 480px，最大 640px。抽屉从右侧进入，Esc 可关闭，关闭后焦点返回触发控件。不可逆提交仍应通过独立确认，而不是直接在抽屉中执行。
+

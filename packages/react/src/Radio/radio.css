@@ -1,0 +1,2 @@
+.xw-choice__control--radio { border-radius: 50%; }
+.xw-choice__input:checked + .xw-choice__control--radio { border: 6px solid var(--xw-brand-primary); background: var(--xw-surface-card); }

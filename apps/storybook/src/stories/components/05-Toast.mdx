@@ -1,0 +1,22 @@
+import { Meta } from '@storybook/blocks';
+import { Toast } from '@xiaowei/react';
+
+<Meta title="规范详解/反馈/轻提示与通知" />
+
+# 轻提示与通知
+
+用于操作完成或后台任务变化。无需用户决策的成功信息自动消失；重要失败和带恢复操作的信息持续显示。
+
+<div className="xw-doc-demo xw-doc-demo--stack" style={{maxWidth: 420}}>
+  <Toast message="已复制到剪贴板" />
+  <Toast tone="info" message="会议总结仍在生成" detail="你可以关闭窗口，完成后会通知你。" />
+  <Toast tone="error" message="文件上传失败" detail="网络已断开，恢复连接后可重试。" />
+</div>
+
+## 行为
+
+- 成功默认 3 秒，信息默认 5 秒。
+- 同时最多展示 3 条；重复事件合并计数。
+- 不自动抢焦点，关闭按钮可由键盘访问。
+- 表单错误、不可逆失败和长篇说明不使用 Toast。
+

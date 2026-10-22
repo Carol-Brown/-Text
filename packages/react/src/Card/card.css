@@ -1,0 +1,8 @@
+.xw-card { box-sizing: border-box; display: flex; flex-direction: column; gap: 16px; padding: 20px; color: var(--xw-text-primary); background: var(--xw-surface-card); border: 1px solid var(--xw-border-default); border-radius: var(--xw-radius-card); box-shadow: var(--xw-shadow-card); font-family: var(--xw-font-sans); }
+.xw-card--interactive { cursor: pointer; transition: box-shadow 160ms ease, transform 160ms ease; }
+.xw-card--interactive:hover { box-shadow: var(--xw-shadow-card-hover); transform: translateY(-1px); }
+.xw-card--interactive:focus-within { box-shadow: var(--xw-focus-ring), var(--xw-shadow-card); }
+.xw-card__title { font-size: 16px; line-height: 24px; font-weight: 700; }
+.xw-card__body { color: var(--xw-text-secondary); font-size: 14px; line-height: 24px; }
+.xw-card__footer { display: flex; gap: 12px; align-items: center; }
+@media (prefers-reduced-motion: reduce) { .xw-card--interactive { transition: none; } }

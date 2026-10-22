@@ -1,0 +1,20 @@
+.xw-field { display: grid; gap: 6px; width: 320px; max-width: 100%; color: var(--xw-text-primary); font-family: var(--xw-font-sans); }
+.xw-field__label { font-size: 13px; line-height: 20px; font-weight: 600; }
+.xw-field__label span { color: var(--xw-status-error); }
+.xw-field__message { color: var(--xw-text-tertiary); font-size: 12px; line-height: 18px; }
+.xw-field--error .xw-field__message { color: var(--xw-status-error); }
+.xw-input, .xw-select { box-sizing: border-box; width: 100%; height: var(--xw-control-height); border: 1px solid var(--xw-border-strong); border-radius: 8px; padding: 0 12px; color: var(--xw-text-primary); background: var(--xw-surface-card); font: 14px/20px var(--xw-font-sans); transition: border-color 140ms ease, box-shadow 140ms ease; }
+.xw-input::placeholder { color: var(--xw-text-tertiary); }
+.xw-input:hover:not(:disabled), .xw-select:hover:not(:disabled) { border-color: var(--xw-border-brand); }
+.xw-input:focus-visible, .xw-select:focus-visible { outline: none; border-color: var(--xw-brand-primary); box-shadow: var(--xw-focus-ring); }
+.xw-field--error .xw-input, .xw-field--error .xw-select { border-color: var(--xw-status-error); }
+.xw-input:disabled, .xw-select:disabled { color: var(--xw-text-disabled); background: var(--xw-surface-brand-subtle); cursor: not-allowed; }
+.xw-select { appearance: auto; }
+.xw-switch { display: inline-flex; align-items: center; gap: 10px; color: var(--xw-text-primary); font: 14px/20px var(--xw-font-sans); cursor: pointer; }
+.xw-switch input { position: absolute; opacity: 0; pointer-events: none; }
+.xw-switch__track { box-sizing: border-box; width: 40px; height: 22px; padding: 2px; border-radius: 999px; background: var(--xw-border-strong); transition: background 140ms ease; }
+.xw-switch__track span { display: block; width: 18px; height: 18px; border-radius: 50%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,.18); transition: transform 140ms ease; }
+.xw-switch input:checked + .xw-switch__track { background: var(--xw-brand-primary); }
+.xw-switch input:checked + .xw-switch__track span { transform: translateX(18px); }
+.xw-switch input:focus-visible + .xw-switch__track { box-shadow: var(--xw-focus-ring); }
+.xw-switch input:disabled + .xw-switch__track, .xw-switch:has(input:disabled) { opacity: .55; cursor: not-allowed; }

@@ -1,0 +1,21 @@
+import { Meta } from '@storybook/blocks';
+import { Progress, Button } from '@xiaowei/react';
+
+<Meta title="规范详解/反馈/进度" />
+
+# 进度
+
+<div className="xw-doc-demo xw-doc-demo--stack">
+  <Progress value={68} label="正在上传会议录音" detail="68 MB / 100 MB" />
+  <Progress label="正在生成会议总结" detail="已完成转写，正在提取行动项" />
+  <Button variant="ghost" size="small">取消任务</Button>
+</div>
+
+## 选择规则
+
+- 有真实总量时显示百分比；AI 推理等未知总量只显示阶段，禁止伪造进度。
+- 少于 300ms 不显示；300ms–2s 使用轻量加载；超过 2s 显示阶段；超过 10s 提供后台运行、取消或稍后查看。
+- 取消后说明已完成部分是否保留；失败后保留输入和中间产物。
+
+任务状态统一为：排队中、执行中、等待用户、已暂停、已完成、部分完成、失败和已取消。
+

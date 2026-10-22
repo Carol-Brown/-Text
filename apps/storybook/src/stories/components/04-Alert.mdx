@@ -1,0 +1,18 @@
+import { Meta } from '@storybook/blocks';
+import { Alert, Button } from '@xiaowei/react';
+
+<Meta title="规范详解/反馈/页面提示" />
+
+# 页面提示
+
+用于当前页面中需要持续存在的说明或异常。它不会像弹窗一样阻断任务。
+
+<div className="xw-doc-demo xw-doc-demo--stack">
+  <Alert title="将在本地处理" description="文件不会上传到云端。" />
+  <Alert tone="success" title="驱动检查完成" description="当前驱动均为推荐版本。" />
+  <Alert tone="warning" title="需要重启电脑" description="更新将在重启后生效。" action={<Button variant="ghost" size="small">稍后重启</Button>} />
+  <Alert tone="error" title="无法读取文件" description="文件可能已损坏，请更换文件后重试。" />
+</div>
+
+信息、成功、警告和错误必须同时使用图标与文字。可恢复错误至少提供“重试、查看详情或更换方案”之一。不要用页面提示代替字段错误。
+

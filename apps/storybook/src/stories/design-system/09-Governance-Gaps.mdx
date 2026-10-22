@@ -1,0 +1,61 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="维护/系统规范/09 治理与缺口计划" />
+
+# 治理与缺口计划
+
+## Component coverage
+
+| Category | 现有/可收敛 | 需要补充 |
+|---|---|---|
+| Foundations | 色彩、字体、图标、卡片、深浅主题基础 | 语义 token、动效、层级、密度 |
+| General | Button、Icon Button | Link、快捷键展示 |
+| Layout | 应用壳层、侧栏、卡片、分栏、桌面浮层 | Grid/Stack、Drawer、响应规则 |
+| Navigation | 侧栏、Tabs、Menu | Steps、Breadcrumb、Pagination |
+| Data Entry | 输入、Checkbox、Radio、上传、会话输入 | Field、Select、Switch、日期/数字、统一校验 |
+| Data Display | 卡片、列表、表格、Tag、文件、预览 | Skeleton、Descriptions、Statistic、Collapse |
+| Feedback | 零散 Toast、通知、空/错误、个别确认框 | Alert、Modal 规范、Result、离线、恢复策略 |
+| Progress | 局部加载、扫描/上传个案 | Progress、阶段模型、暂停/取消/部分完成 |
+| AI/PC | 会话、技能、知识库、扫描、会议、工作流 | 统一任务中心、权限、证据与执行记录 |
+
+## Priority
+
+### P0 — 先让关键流程可用且可信
+
+Field、Modal、Alert、Toast/Notification、Progress、AI Task State、Permission Request、Upload Process、Error/Recovery。
+
+### P1 — 让复杂页面一致
+
+Drawer、Table/List、Empty/Skeleton、Steps、Split View、Task Card、Descriptions、Tooltip/Menu、批量操作。
+
+### P2 — 按真实需求加入
+
+Date Picker、Slider、Pagination、Timeline、Tour、Carousel、Rate。没有业务场景时不要为了“组件数量完整”而制作。
+
+## Definition of Ready
+
+组件进入设计前应有真实场景、所有者、P0/P1/P2 优先级和至少两个使用实例。进入开发前必须有 anatomy、token、变体、状态矩阵、键盘规则、内容规则、深浅主题和边界案例。
+
+## Definition of Done
+
+- Figma 主组件、变量绑定和变体命名与 MDX 一致。
+- Storybook 覆盖主要状态、异常状态、深浅主题、长中文和缩放。
+- 设计与开发分别验收视觉、行为、键盘和屏幕阅读器。
+- 变更有版本记录；破坏性修改给迁移说明；弃用至少保留一个版本周期。
+
+## Suggested release slices
+
+1. **0.1 Trust & Feedback**：P0 反馈、进度、弹窗、权限与输入字段。
+2. **0.2 Work Surfaces**：列表/表格、分栏、抽屉、任务卡与空状态。
+3. **0.3 AI Execution**：会话、工作流、任务中心、证据和恢复。
+4. **1.0 Stable**：Figma/MDX/代码一致，核心路径通过无障碍与主题验收。
+
+## References
+
+- [Ant Design — Component Overview](https://ant.design/components/overview/)
+- [Ant Design — Data Entry](https://ant.design/docs/spec/data-entry/)
+- [Ant Design — Navigation](https://ant.design/docs/spec/navigation/)
+- [Ant Design — Feedback](https://ant.design/docs/spec/feedback/)
+- [Material Design 3 — Foundations](https://m3.material.io/foundations/)
+- [Material Design 3 — Snackbar](https://m3.material.io/components/snackbar/overview)
+

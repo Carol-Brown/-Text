@@ -1,0 +1,19 @@
+import { Meta } from '@storybook/blocks';
+import { Card, Progress, Button, StatusBadge } from '@xiaowei/react';
+
+<Meta title="规范详解/业务模式/AI 任务卡" />
+
+# AI 任务卡
+
+长任务不能只表现为持续聊天。任务卡是面板、悬浮球、通知和历史记录之间共享的持久任务对象。
+
+<div className="xw-doc-demo">
+  <Card style={{width: 420, maxWidth: '100%'}} title="整理会议记录" footer={<div className="xw-story-grid"><Button variant="ghost" size="small">暂停</Button><Button size="small">查看任务</Button></div>}>
+    <StatusBadge tone="warning">正在生成</StatusBadge>
+    <div style={{height: 12}} />
+    <Progress label="正在提取行动项" detail="已完成转写和发言人识别" />
+  </Card>
+</div>
+
+任务卡必须包含目标、当前阶段、输入来源、运行位置、最近事件和可用控制。完成后展示结果、证据、打开/导出/继续操作；失败时保留输入和中间产物。跨表面使用同一个任务身份，不能要求用户重新上传或重新开始。
+

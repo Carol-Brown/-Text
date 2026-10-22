@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/blocks';
+import { Field, Input, Select, Switch } from '@xiaowei/react';
+
+<Meta title="规范详解/数据录入/输入与选择" />
+
+# 输入与选择
+
+所有输入都使用统一的字段结构：标签、控件、帮助信息和错误信息。占位符不能替代标签。
+
+<div className="xw-doc-demo xw-doc-demo--stack">
+  <Field label="知识库名称" hint="最多 30 个字符" required><Input placeholder="例如：售后服务资料" /></Field>
+  <Field label="处理位置"><Select defaultValue="local"><option value="local">本地处理</option><option value="cloud">云端处理</option></Select></Field>
+  <Switch label="完成后通知我" defaultChecked />
+</div>
+
+## 错误与禁用
+
+<div className="xw-doc-demo xw-doc-demo--stack">
+  <Field label="文件夹路径" error="无法访问该文件夹，请重新选择"><Input defaultValue="D:\受限文件" aria-invalid="true" /></Field>
+  <Field label="当前设备"><Input value="HP Laptop 14" disabled readOnly /></Field>
+</div>
+
+## 选择控件决策
+
+| 控件 | 使用条件 |
+|---|---|
+| 单选框 | 2–5 个互斥选项需要同时可见 |
+| 下拉选择 | 选项较多、空间有限 |
+| 复选框 | 独立多选或协议确认 |
+| 开关 | 设置会立即生效的开/关 |
+
+校验尽量在失焦或提交后发生。错误说明问题和修复方式；禁用控件仍要保持内容可读。
+

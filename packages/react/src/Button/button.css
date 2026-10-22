@@ -1,0 +1,26 @@
+.xw-button { border: 0; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: var(--xw-radius-pill); font-family: var(--xw-font-sans); cursor: pointer; transition: background-color 140ms ease, opacity 140ms ease, box-shadow 140ms ease, transform 80ms ease; }
+.xw-button:focus-visible { outline: none; box-shadow: var(--xw-focus-ring); }
+.xw-button:active:not(:disabled) { transform: translateY(1px); }
+.xw-button:disabled { cursor: not-allowed; }
+.xw-button--small { min-width: 84px; height: 32px; padding: 8px 12px; font-size: 14px; line-height: 16px; }
+.xw-button--medium { min-width: 120px; height: 32px; padding: 8px 18px; font-size: 12px; line-height: 16px; }
+.xw-button--large { min-width: 168px; height: 36px; padding: 10px 24px; font-size: 14px; line-height: 16px; }
+.xw-button--primary { color: var(--xw-text-on-brand); background: var(--xw-brand-primary); }
+.xw-button--primary:hover:not(:disabled) { background: var(--xw-brand-hover); }
+.xw-button--primary:active:not(:disabled) { background: var(--xw-brand-pressed); }
+.xw-button--primary:disabled { background: var(--xw-button-disabled); color: var(--xw-text-on-brand); }
+.xw-button--secondary { color: var(--xw-brand-primary); background: var(--xw-surface-card); border: 1px solid var(--xw-brand-primary); }
+.xw-button--secondary:hover:not(:disabled) { color: var(--xw-brand-hover); border-color: var(--xw-brand-hover); background: var(--xw-surface-brand-subtle); }
+.xw-button--secondary:active:not(:disabled) { color: var(--xw-brand-pressed); border-color: var(--xw-brand-pressed); }
+.xw-button--secondary:disabled { color: var(--xw-text-disabled); border-color: var(--xw-border-default); }
+.xw-button--ghost { color: var(--xw-text-primary); background: transparent; border: 1px solid var(--xw-border-default); }
+.xw-button--ghost:hover:not(:disabled) { background: var(--xw-interaction-hover); }
+.xw-button--ghost:active:not(:disabled) { background: var(--xw-interaction-pressed); }
+.xw-button--ghost:disabled { color: var(--xw-text-disabled); }
+.xw-button--danger { color: #fff; background: var(--xw-status-error); }
+.xw-button--danger:hover:not(:disabled) { filter: brightness(.94); }
+.xw-button--danger:active:not(:disabled) { filter: brightness(.86); }
+.xw-button--danger:disabled { color: var(--xw-text-disabled); background: var(--xw-button-disabled); }
+.xw-button__spinner { width: 14px; height: 14px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: xw-spin .8s linear infinite; }
+@keyframes xw-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .xw-button { transition: none; } .xw-button__spinner { animation-duration: 1.6s; } }

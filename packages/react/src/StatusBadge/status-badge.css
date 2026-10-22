@@ -1,0 +1,5 @@
+.xw-status { display: inline-flex; align-items: center; gap: 8px; width: fit-content; padding: 4px 10px; border-radius: var(--xw-radius-pill); font: 13px/20px var(--xw-font-sans); }
+.xw-status__dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.xw-status--success { color: var(--xw-status-success); background: var(--xw-status-success-subtle); }
+.xw-status--warning { color: var(--xw-status-warning); background: var(--xw-status-warning-subtle); }
+.xw-status--error { color: var(--xw-status-error); background: var(--xw-status-error-subtle); }

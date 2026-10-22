@@ -1,0 +1,16 @@
+import { Meta } from '@storybook/blocks';
+import { Card, Button, StatusBadge } from '@xiaowei/react';
+
+<Meta title="规范详解/数据展示/卡片" />
+
+# 卡片
+
+用于聚合一个对象、一组指标或一个可执行任务。卡片不是通用装饰容器。
+
+<div className="xw-doc-demo">
+  <Card style={{maxWidth: 340}} title="电脑状态良好" footer={<Button size="small">查看详情</Button>}>未发现需要立即处理的问题。<br /><StatusBadge tone="success">今天 10:24 已检查</StatusBadge></Card>
+  <Card style={{maxWidth: 340}} title="会议总结" interactive>录音已转写，包含 6 条行动项。</Card>
+</div>
+
+标准圆角 16px，内边距 20 或 24px。只有整张卡可点击时才显示整卡悬停；复杂卡片只让明确按钮可点击。标题不超过两行，描述不超过三行，完整信息进入详情。
+

@@ -1,0 +1,16 @@
+html, body, #storybook-root { min-height: 100%; margin: 0; }
+.xw-story-canvas { min-height: 100vh; box-sizing: border-box; padding: 24px; color: var(--xw-text-primary); background: var(--xw-surface-page); font-family: var(--xw-font-sans); }
+.xw-story-grid { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.xw-doc-demo { box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; width: 100%; min-height: 112px; margin: 16px 0 24px; padding: 24px; border: 1px solid var(--xw-border-default); border-radius: 16px; color: var(--xw-text-primary); background: var(--xw-surface-card); }
+.xw-doc-demo--stack { align-items: stretch; flex-direction: column; max-width: 720px; }
+.xw-doc-demo--center { justify-content: center; }
+.xw-doc-note { max-width: 720px; padding: 12px 16px; border-left: 3px solid var(--xw-brand-primary); border-radius: 0 8px 8px 0; color: var(--xw-text-secondary); background: var(--xw-surface-brand-subtle); }
+.xw-doc-swatch { display: grid; place-items: end start; box-sizing: border-box; width: 144px; height: 88px; padding: 10px; border: 1px solid var(--xw-border-default); border-radius: 12px; color: var(--xw-text-primary); background: var(--swatch); font-size: 12px; }
+.sbdocs-wrapper { padding: 32px !important; background: var(--xw-surface-page) !important; }
+.sbdocs-content { max-width: 920px !important; }
+.sbdocs-title { margin-bottom: 8px !important; color: var(--xw-text-primary) !important; font-family: var(--xw-font-sans) !important; font-size: 34px !important; line-height: 1.25 !important; }
+.sbdocs h2 { margin-top: 32px !important; border: 0 !important; color: var(--xw-text-primary) !important; font-family: var(--xw-font-sans) !important; }
+.sbdocs p, .sbdocs li, .sbdocs td, .sbdocs th { font-family: var(--xw-font-sans) !important; }
+.sbdocs-preview, .docs-story { min-height: 0 !important; }
+.docs-story > div { min-height: 0 !important; }
+@media (max-width: 700px) { .sbdocs-wrapper { padding: 20px !important; } .xw-doc-demo { padding: 16px; } }
