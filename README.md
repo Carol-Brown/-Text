@@ -18,6 +18,12 @@ pnpm typecheck
 pnpm build:storybook
 ```
 
+## 在线预览
+
+推送到 `main` 分支后，GitHub Actions 会自动构建并发布 Storybook：
+
+- https://carol-brown.github.io/-Text/
+
 ## Figma baseline
 
 - File: `awdxxB8TRaNsw1rZC32fKb`
